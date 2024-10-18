@@ -112,7 +112,9 @@ class Vector:
 
                 return VikingDBVectorFactory
             case VectorType.SUPABASE:
-                from core.rag.datasource.vdb.supabase.supabase_vector import SupabaseVector
+                from core.rag.datasource.vdb.supabase.supabase_vector import SupabaseVectorFactory
+
+                return SupabaseVectorFactory
             case _:
                 raise ValueError(f"Vector store {vector_type} is not supported.")
 
